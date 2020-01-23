@@ -32,13 +32,31 @@ namespace Calculator
         /// <exception cref="System.OverflowException"></exception>
         public static int Addition(int a, int b)
         {
-            long IntermediateResult = (long)a + b;
-            if (IntermediateResult > int.MaxValue)
-                throw new System.OverflowException("The result is overflowing the int type");
-            else if (IntermediateResult < int.MinValue)
+            long IntermediateResult = (long)a + (long)b;
+            if (IntermediateResult > int.MaxValue||IntermediateResult<int.MinValue)
                 throw new System.OverflowException("The result is overflowing the int type");
             return a + b;
         }
+        /// <summary>
+        /// This method is used to do substraction operation betweem two int types.
+        /// Second parameter is substracted from first parameter
+        /// </summary>
+        /// <param name="a">This should be an integer</param>
+        /// <param name="b">This should be an integer</param>
+        /// <returns>This method returns an int type</returns>
+        /// <exception cref="System.OverflowException"></exception>
 
+        public static int Substraction(int a, int b)
+        {
+            long IntermediateResult = (long)a - (long)b;
+            if (IntermediateResult > int.MaxValue || IntermediateResult < int.MinValue)
+                throw new System.OverflowException();
+            return a - b;
+        }
+        public static int Multiplication(int a, int b)
+        {
+            
+
+        }
     }
 }

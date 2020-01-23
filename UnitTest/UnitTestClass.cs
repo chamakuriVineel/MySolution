@@ -35,5 +35,19 @@ namespace UnitTest
             int expected = int.MaxValue;
             Assert.AreEqual(expected,Calculator.MathOperations.Addition(a,b),"NotWorking as expected");
         }
+        [TestMethod]
+        public void CheckSubstractionWithOverFlowCondition()
+        {
+            int a = 0;
+            int b = int.MinValue;
+            Assert.ThrowsException<System.OverflowException>(()=>Calculator.MathOperations.Substraction(a,b));
+        }
+        [TestMethod]
+        public void CheckSbstractionWithCorrectArguments()
+        {
+            int a = 0;
+            int b = int.MaxValue;
+            Assert.AreEqual(-int.MaxValue, Calculator.MathOperations.Substraction(a, b), 0, "Not working as expected");
+        }
     }
 }
