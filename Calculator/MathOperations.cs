@@ -53,9 +53,19 @@ namespace Calculator
                 throw new System.OverflowException();
             return a - b;
         }
+        /// <summary>
+        /// This method is used to multiply two int types
+        /// </summary>
+        /// <param name="a">This should be of type integer</param>
+        /// <param name="b">This should be of type integer</param>
+        /// <returns>This method will return an integer type</returns>
+        /// <exception cref="System.OverflowException"></exception>
         public static int Multiplication(int a, int b)
         {
-            
+            long IntermediateResult = (long)a * b;
+            if (IntermediateResult > int.MaxValue || IntermediateResult < int.MinValue)
+                throw new System.OverflowException("The result is overflowing the integer type");
+            return a - b;
 
         }
     }

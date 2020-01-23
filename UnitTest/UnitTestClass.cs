@@ -43,11 +43,25 @@ namespace UnitTest
             Assert.ThrowsException<System.OverflowException>(()=>Calculator.MathOperations.Substraction(a,b));
         }
         [TestMethod]
-        public void CheckSbstractionWithCorrectArguments()
+        public void CheckSubstractionWithCorrectArguments()
         {
             int a = 0;
             int b = int.MaxValue;
             Assert.AreEqual(-int.MaxValue, Calculator.MathOperations.Substraction(a, b), 0, "Not working as expected");
+        }
+        [TestMethod]
+        public void CheckMultilicationWithOverFlowCondition()
+        {
+            int a = int.MaxValue;
+            int b = 2;
+            Assert.ThrowsException<System.OverflowException>(()=>Calculator.MathOperations.Multiplication(a,b));
+        }
+        [TestMethod]
+        public void CheckMultiplicationWithCorrectArguments()
+        {
+            int a = Calculator.MathOperations.Division(int.MaxValue , 2);
+            int b = 2;
+            Assert.AreEqual(int.MaxValue, Calculator.MathOperations.Multiplication(a, b), 0,"Not Working as expected");
         }
     }
 }
