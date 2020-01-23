@@ -21,7 +21,7 @@ namespace Calculator
             {
                 throw new System.DivideByZeroException();
             }
-            return a/b;
+            return a / b;
         }
         /// <summary>
         /// This method is used to add two int type numbers.
@@ -33,7 +33,7 @@ namespace Calculator
         public static int Addition(int a, int b)
         {
             long IntermediateResult = (long)a + (long)b;
-            if (IntermediateResult > int.MaxValue||IntermediateResult<int.MinValue)
+            if (IntermediateResult > int.MaxValue || IntermediateResult < int.MinValue)
                 throw new System.OverflowException("The result is overflowing the int type");
             return a + b;
         }
