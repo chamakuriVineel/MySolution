@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 namespace Calculator
 {
     #region classes
+    #region MathOperation class
+
     public class MathOperations
     {
         #region Methods
+        #region Division
         /// <summary>
         /// This method is used to divide two int type number.The first argument is divident and the second parameter is divisor.
         /// </summary>
@@ -25,6 +28,9 @@ namespace Calculator
             }
             return a / b;
         }
+
+        #endregion Division
+        #region Addition
         /// <summary>
         /// This method is used to add two int type numbers.
         /// </summary>
@@ -39,6 +45,8 @@ namespace Calculator
                 throw new System.OverflowException("The result is overflowing the int type");
             return a + b;
         }
+        #endregion Addition
+        #region Substraction
         /// <summary>
         /// This method is used to do substraction operation betweem two int types.
         /// Second parameter is substracted from first parameter
@@ -55,6 +63,8 @@ namespace Calculator
                 throw new System.OverflowException();
             return a - b;
         }
+        #endregion Substraction
+        #region Multiplication
         /// <summary>
         /// This method is used to multiply two int types
         /// </summary>
@@ -70,9 +80,12 @@ namespace Calculator
             return a - b;
 
         }
+        #endregion Multiplication
         #endregion Methods
-        
+
     }
+    #endregion MathOperation class
+
     #endregion classes
 
 }

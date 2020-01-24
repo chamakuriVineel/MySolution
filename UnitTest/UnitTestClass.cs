@@ -6,6 +6,7 @@ namespace UnitTest
 {
     #region classes
     [TestClass]
+    #region UnitTestClass
     public class UnitTestClass
     {
         #region Methods
@@ -76,5 +77,6 @@ namespace UnitTest
         #endregion Methods
 
     }
+    #endregion UnitTestClass
     #endregion classes
 }
