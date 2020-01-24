@@ -4,9 +4,12 @@ using Calculator;
 
 namespace UnitTest
 {
+    #region classes
     [TestClass]
     public class UnitTestClass
     {
+        #region Methods
+        #region DivisionTests
         [TestMethod]
         public void checkDivisionWithZero()
         {
@@ -20,6 +23,8 @@ namespace UnitTest
             int expected = 5049;
             Assert.AreEqual(expected,Calculator.MathOperations.Division(a,b),0,"Not working as expected");
         }
+        #endregion DivisionTests
+        #region AdditionTests
         [TestMethod]
         public void CheckAdditionWithOverFlowCondition()
         {
@@ -35,6 +40,8 @@ namespace UnitTest
             int expected = int.MaxValue;
             Assert.AreEqual(expected,Calculator.MathOperations.Addition(a,b),"NotWorking as expected");
         }
+        #endregion AditionTests
+        #region SubstractionTest
         [TestMethod]
         public void CheckSubstractionWithOverFlowCondition()
         {
@@ -49,6 +56,8 @@ namespace UnitTest
             int b = int.MaxValue;
             Assert.AreEqual(-int.MaxValue, Calculator.MathOperations.Substraction(a, b), 0, "Not working as expected");
         }
+        #endregion SubstractionTests
+        #region MultiplicationTests
         [TestMethod]
         public void CheckMultilicationWithOverFlowCondition()
         {
@@ -63,5 +72,9 @@ namespace UnitTest
             int b = 2;
             Assert.AreEqual(int.MaxValue, Calculator.MathOperations.Multiplication(a, b), 0,"Not Working as expected");
         }
+        #endregion MultiplicationTests
+        #endregion Methods
+
     }
+    #endregion classes
 }

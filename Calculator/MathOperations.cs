@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
+    #region classes
     public class MathOperations
     {
+        #region Methods
         /// <summary>
         /// This method is used to divide two int type number.The first argument is divident and the second parameter is divisor.
         /// </summary>
@@ -68,6 +70,9 @@ namespace Calculator
             return a - b;
 
         }
-        //comments for fun
+        #endregion Methods
+        
     }
+    #endregion classes
+
 }
