@@ -85,7 +85,19 @@ namespace Calculator
 
     }
     #endregion MathOperation class
+    public class FormatException :ApplicationException
+    {
+        private String message;
+        public FormatException(String message="Format incorrect")
+        {
+            this.message= message;
+        }
+        public String getMessage()
+        {
+            return message;
+        }
+
+    }
 
     #endregion classes
-
 }
